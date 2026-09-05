@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; --ink: #2a2318; --paper: #faf6ee; --accent: #b87333; --muted: #6b6153; --rule: #e6dfd0; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #f2ebdb; --paper: #131110; --accent: #ffd68f; --muted: #a89e8c; --rule: #2c2823; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Palatino Linotype", serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  h1 { font-size: 2rem; font-weight: 600; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; font-weight: 600; margin: 2.25rem 0 .5rem; }
+  .meta { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+  p, li { margin: .5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .6rem .5rem; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 600; color: var(--muted); font-family: -apple-system, system-ui, sans-serif; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
+  .summary { border-left: 3px solid var(--accent); padding: .25rem 0 .25rem 1rem; margin: 1.5rem 0; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Lantern Privacy Policy</h1>
+  <p class="meta">Effective 4 September 2026 · Applies to the Lantern iOS app</p>
+
+  <div class="summary">
+    <p><strong>The short version.</strong> Lantern has no accounts, no ads, no analytics, and no trackers. Nothing you do in the app is tied to your name, email, phone number, or precise location. The only data that leaves your phone is what's needed to identify a product you scanned, fetch the weather for the forest, and, if you ask for it, tell us a product is missing.</p>
+  </div>
+
+  <h2>What Lantern uses, and why</h2>
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Where it goes</th></tr>
+    <tr>
+      <td><strong>Camera</strong></td>
+      <td>To read a product barcode in store. Recognition happens on your phone.</td>
+      <td>Nowhere. No image or video is stored or transmitted.</td>
+    </tr>
+    <tr>
+      <td><strong>Barcodes you scan</strong></td>
+      <td>To find the product's rating. If Lantern's catalog doesn't know the code, the barcode alone is looked up in a public food database to learn the product's name.</td>
+      <td>Open Food Facts (a non-profit, open database). Only the barcode digits are sent.</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate location</strong> (optional)</td>
+      <td>To match the forest's weather and daylight to yours. Lantern asks for reduced-accuracy location only, and only if you turn on "Match my weather".</td>
+      <td>Open-Meteo, a free weather service, receives coarse coordinates to return a forecast. Lantern never stores your location and never sends it anywhere else.</td>
+    </tr>
+    <tr>
+      <td><strong>Rating requests</strong> (only when you tap "Request this rating")</td>
+      <td>To tell us a product you scanned isn't rated yet, so we can research it.</td>
+      <td>Lantern's database, hosted on Supabase. Sent: the barcode, the product name if known, and a random per-install identifier (see below).</td>
+    </tr>
+    <tr>
+      <td><strong>Barcode links</strong> (only when you answer "Is it one of these?")</td>
+      <td>To teach the catalog which barcode belongs to which product, so scanning works for everyone.</td>
+      <td>Lantern's database, hosted on Supabase. Sent: the barcode, the product you chose, and the same per-install identifier.</td>
+    </tr>
+    <tr>
+      <td><strong>Saved products</strong></td>
+      <td>Your favourites list.</td>
+      <td>Stays on your phone. Never uploaded.</td>
+    </tr>
+  </table>
+
+  <h2>The per-install identifier</h2>
+  <p>When you file a request or link a barcode, Lantern includes a random identifier that iOS generates for the app on your device. It is not your name, Apple ID, phone number, advertising ID, or device serial number, and it cannot be used to contact or identify you. Its only jobs are to count how many <em>different</em> phones asked for the same product, and to limit how many requests a single install can send in a day. Deleting the app discards it; reinstalling generates a new one that has no connection to the old.</p>
+
+  <h2>What Lantern does not do</h2>
+  <ul>
+    <li>No accounts, sign-in, or passwords.</li>
+    <li>No advertising, advertising identifiers, or ad networks.</li>
+    <li>No analytics or crash-reporting SDKs, and no third-party tracking code of any kind.</li>
+    <li>No sale, sharing, or trading of data with anyone.</li>
+    <li>No precise location, contacts, photos, or health data.</li>
+  </ul>
+
+  <h2>Services Lantern talks to</h2>
+  <ul>
+    <li><strong>Open Food Facts</strong> — public product database, used to name a scanned barcode Lantern doesn't recognise. <a href="https://world.openfoodfacts.org/privacy">Their privacy policy.</a> Lantern's product data is also built in part from Open Food Facts, under the Open Database License.</li>
+    <li><strong>Open-Meteo</strong> — weather forecasts from coarse coordinates, only if you enable "Match my weather". <a href="https://open-meteo.com/en/terms">Their terms.</a></li>
+    <li><strong>GitHub</strong> — hosts the product catalog the app downloads when it opens, so ratings update without an app update. Like any web download, GitHub sees your IP address.</li>
+    <li><strong>Supabase</strong> — hosts the database that receives rating requests and barcode links. <a href="https://supabase.com/privacy">Their privacy policy.</a></li>
+  </ul>
+
+  <h2>Retention and deletion</h2>
+  <p>Rating requests and barcode links are kept for as long as they are useful for maintaining the catalog, then removed. Because they carry no personal information, there is nothing in them we could use to look you up. If you would like everything associated with your install removed, deleting the app severs the connection permanently; you may also email the address below and we will delete records on request.</p>
+
+  <h2>Children</h2>
+  <p>Lantern is not directed at children under 13 and does not knowingly collect information from them. It collects no personal information from anyone.</p>
+
+  <h2>Not medical advice</h2>
+  <p>Lantern's grades summarise published evidence about ingredients, additives, processing, and packaging. They are an aid to reading a label, not medical or dietary advice. Every rating shows its sources and how confident we are in them; please read those before making decisions about your health, and consult a professional for anything that matters.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be posted here with a new effective date. Material changes will be noted inside the app.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or deletion requests: <a href="mailto:kshahreare@gmail.com">kshahreare@gmail.com</a>.</p>
+
+  <footer>Lantern is an independent project and is not affiliated with or endorsed by Costco Wholesale Corporation. Product names and brands are the property of their respective owners.</footer>
+</main>
+</body>
+</html>

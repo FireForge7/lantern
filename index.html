@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern</title>
+<style>
+  :root { color-scheme: light dark; --ink: #2a2318; --paper: #faf6ee; --accent: #b87333; --muted: #6b6153; --rule: #e6dfd0; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #f2ebdb; --paper: #131110; --accent: #ffd68f; --muted: #a89e8c; --rule: #2c2823; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Palatino Linotype", serif; }
+  main { max-width: 38rem; margin: 0 auto; padding: 4rem 1.25rem; }
+  h1 { font-size: 2.6rem; font-weight: 600; margin: 0; letter-spacing: -.01em; }
+  .tag { color: var(--muted); font-size: 1.1rem; margin: .25rem 0 2rem; }
+  h2 { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 .4rem; }
+  p { margin: .5rem 0; }
+  a { color: var(--accent); }
+  .grades { display: flex; gap: .5rem; margin: 1.25rem 0; font-weight: 700; font-size: 1.4rem; }
+  .grades span { width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border-radius: 50%; color: #1a1610; }
+  footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Lantern</h1>
+  <p class="tag">Honest health grades for Costco food, in the aisle.</p>
+
+  <div class="grades" aria-label="Grades from S to F">
+    <span style="background:#b9d99a">S</span><span style="background:#c9cf84">A</span><span style="background:#d6c26e">B</span>
+    <span style="background:#dcaa5c">C</span><span style="background:#d2884a">D</span><span style="background:#b96a3c">F</span>
+  </div>
+
+  <p>Scan a barcode and land in that product's world: a forest whose health mirrors the food's. S is lush and alive; each grade down loses colour and life until F is bare woodland in haze. Every grade shows its evidence — what's confirmed, what's only reported, what's disputed — with sources you can read.</p>
+
+  <h2>How grades work</h2>
+  <p>Four dimensions, weighted: nutrition, additives, processing, packaging. Any confirmed high-severity concern caps a product at D. Grades are an aid to reading a label, not medical advice.</p>
+
+  <h2>Privacy</h2>
+  <p>No accounts, no ads, no analytics, no trackers. <a href="privacy.html">Read the privacy policy.</a></p>
+
+  <h2>Support</h2>
+  <p>Questions, corrections, or a product you'd like rated: <a href="mailto:kshahreare@gmail.com">kshahreare@gmail.com</a>. In the app, scanning an unrated product and tapping <em>Request this rating</em> does the same thing.</p>
+
+  <footer>Lantern is an independent project and is not affiliated with or endorsed by Costco Wholesale Corporation. Product data includes information from <a href="https://world.openfoodfacts.org">Open Food Facts</a>, available under the Open Database License.</footer>
+</main>
+</body>
+</html>
