@@ -25,10 +25,10 @@
 <body>
 <main>
   <h1>Lantern Privacy Policy</h1>
-  <p class="meta">Effective 4 September 2026 · Applies to the Lantern iOS app</p>
+  <p class="meta">Effective 24 September 2026 · Applies to the Lantern iOS app</p>
 
   <div class="summary">
-    <p><strong>The short version.</strong> Lantern has no accounts, no ads, no analytics, and no trackers. Nothing you do in the app is tied to your name, email, phone number, or precise location. The only data that leaves your phone is what's needed to identify a product you scanned, fetch the weather for the forest, and, if you ask for it, tell us a product is missing.</p>
+    <p><strong>The short version.</strong> Lantern has no accounts, no ads, no analytics, and no trackers. Nothing you do in the app is tied to your name, email, phone number, or precise location. The only data that leaves your phone is what's needed to identify a product you scanned, fetch the weather for the forest, and, when a barcode isn't in Lantern yet, tell us so we can add it.</p>
   </div>
 
   <h2>What Lantern uses, and why</h2>
@@ -50,9 +50,9 @@
       <td>Open-Meteo, a free weather service, receives coarse coordinates to return a forecast. Lantern never stores your location and never sends it anywhere else.</td>
     </tr>
     <tr>
-      <td><strong>Rating requests</strong> (only when you tap "Request this rating")</td>
-      <td>To tell us a product you scanned isn't rated yet, so we can research it.</td>
-      <td>Lantern's database, hosted on Supabase. Sent: the barcode, the product name if known, and a random per-install identifier (see below).</td>
+      <td><strong>Barcodes Lantern didn't recognise</strong> (sent automatically when a scan finds nothing)</td>
+      <td>So the barcode can be added to the product Lantern already rates, or the product can be queued for research, and the next scan works. Barcodes Lantern recognises are never sent.</td>
+      <td>Lantern's database, hosted on Supabase. Sent: the barcode, the product name if Open Food Facts knew it, and a random per-install identifier (see below). Nothing about where or when you shop.</td>
     </tr>
     <tr>
       <td><strong>Barcode links</strong> (only when you answer "Is it one of these?")</td>
@@ -67,7 +67,7 @@
   </table>
 
   <h2>The per-install identifier</h2>
-  <p>When you file a request or link a barcode, Lantern includes a random identifier that iOS generates for the app on your device. It is not your name, Apple ID, phone number, advertising ID, or device serial number, and it cannot be used to contact or identify you. Its only jobs are to count how many <em>different</em> phones asked for the same product, and to limit how many requests a single install can send in a day. Deleting the app discards it; reinstalling generates a new one that has no connection to the old.</p>
+  <p>When Lantern sends a barcode it didn't recognise, or you link a barcode, it includes a random identifier that iOS generates for the app on your device. It is not your name, Apple ID, phone number, advertising ID, or device serial number, and it cannot be used to contact or identify you. Its only jobs are to count how many <em>different</em> phones scanned the same product, and to limit how many barcodes a single install can send in a day. Deleting the app discards it; reinstalling generates a new one that has no connection to the old.</p>
 
   <h2>What Lantern does not do</h2>
   <ul>
@@ -87,7 +87,7 @@
   </ul>
 
   <h2>Retention and deletion</h2>
-  <p>Rating requests and barcode links are kept for as long as they are useful for maintaining the catalog, then removed. Because they carry no personal information, there is nothing in them we could use to look you up. If you would like everything associated with your install removed, deleting the app severs the connection permanently; you may also email the address below and we will delete records on request.</p>
+  <p>Unrecognised barcodes and barcode links are kept for as long as they are useful for maintaining the catalog, then removed. Because they carry no personal information, there is nothing in them we could use to look you up. If you would like everything associated with your install removed, deleting the app severs the connection permanently; you may also email the address below and we will delete records on request.</p>
 
   <h2>Children</h2>
   <p>Lantern is not directed at children under 13 and does not knowingly collect information from them. It collects no personal information from anyone.</p>
